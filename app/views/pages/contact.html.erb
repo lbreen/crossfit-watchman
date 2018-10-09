@@ -1,0 +1,32 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%= image_path 'background.jpeg' %>');">
+  <div class="banner-content">
+    <h1>Contact us</h1>
+    <p>Email or Tel??</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-7">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= data.locations.first.to_json %>"
+      ></div>
+    </div>
+    <div class="col-xs-12 col-sm-5">
+      <h2>Address</h2>
+      <p>Episkopi Gym</p>
+      <p>Salamanca Barracks</p>
+      <p>Episkopi Garrison</p>
+      <ul class="list-inline">
+        <li><i class="fas fa-phone"></i></li>
+        <li><p>+357 4565 3452</p></li>
+      </ul>
+      <ul class="list-inline">
+        <li><i class="fas fa-mail"></i></li>
+        <li><p>crossfitwatchman@gmail.com</p></li>
+      </ul>
+    </div>
+  </div>
+</div>

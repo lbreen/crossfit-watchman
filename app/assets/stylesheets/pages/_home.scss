@@ -1,1 +1,11 @@
-// Specific CSS for your home-page
+.photo-text {
+  margin-top: 100px;
+  text-align: center;
+}
+.homepage-link {
+  color: $dark-grey;
+  &:hover {
+    color: $grey;
+    text-decoration: none;
+  }
+}

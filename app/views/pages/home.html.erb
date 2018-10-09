@@ -1,2 +1,48 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%= image_path 'background.jpeg' %>');">
+  <div class="banner-content">
+    <h1>Crossfit Watchman</h1>
+    <p>Forging Elite Fitness</p>
+    <a class="btn btn-primary">Find out more</a>
+  </div>
+</div>
+<div class="container" style="position: relative; bottom: 60px;">
+  <div class="row padded">
+    <div class="col-xs-12 col-sm-7 text-center">
+      <%= image_tag 'crossfit-photo-1.jpg', class: 'photo-large photo-border' %>
+    </div>
+    <div class="col-xs-12 col-sm-5 text-center">
+      <div class="photo-text text-center">
+        <h1>Timetable</h1>
+        <%= link_to programme_path, class: 'homepage-link' do %>
+          <p>See our weekly programme <i class="fas fa-arrow-circle-right"></i></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="row padded">
+    <div class="col-xs-12 col-sm-5 text-center">
+      <div class="photo-text">
+        <h1>Pricing</h1>
+        <%= link_to pricing_path, class: 'homepage-link' do %>
+          <p>Check out our pricing <i class="fas fa-arrow-circle-right"></i></p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-7 text-center">
+      <%= image_tag 'crossfit-photo-2.jpg', class: 'photo-large photo-border' %>
+    </div>
+  </div>
+  <div class="row padded">
+    <div class="col-xs-12 col-sm-7 text-center">
+      <%= image_tag 'crossfit-photo-3.jpg', class: 'photo-large photo-border' %>
+    </div>
+    <div class="col-xs-12 col-sm-5 text-center">
+      <div class="photo-text">
+        <h1>About us</h1>
+        <%= link_to about_path, class: 'homepage-link' do %>
+          <p>Find out about our team <i class="fas fa-arrow-circle-right"></i></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
