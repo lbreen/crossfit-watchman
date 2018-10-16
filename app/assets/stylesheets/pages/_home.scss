@@ -1,6 +1,18 @@
-.photo-text {
-  margin-top: 100px;
+.homepage-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 40px 0;
+}
+.homepage-card-text {
   text-align: center;
+  h2 {
+    letter-spacing: 2px;
+  }
+}
+.homepage-card-photo img {
+  max-width: 100%;
+  border-radius: 5px;
 }
 .homepage-link {
   color: $dark-grey;

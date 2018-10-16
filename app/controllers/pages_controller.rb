@@ -14,7 +14,4 @@ class PagesController < ApplicationController
 
   def pricing
   end
-
-  def programme
-  end
 end
