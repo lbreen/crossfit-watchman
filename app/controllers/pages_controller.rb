@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @instructors = Instructor.all
   end
 
   def contact

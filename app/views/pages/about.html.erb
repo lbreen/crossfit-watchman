@@ -1,17 +1,25 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%= image_path 'background.jpeg' %>');">
-  <div class="banner-content">
-    <h1>About us</h1>
-  </div>
+<div class="page-title">
+  <div class="break-line"></div>
+  <h2>About Us</h2>
+  <div class="break-line"></div>
 </div>
 <div class="container padded">
-  <div class="row">
-    <div class="col-xs-12">
+  <div class="row page-wrapper">
+    <div class="col-xs-12" style="text-align: right;">
       <h1>Our mission</h1>
       <p>Mission statement</p>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-6">
       <h1>What is CrossFit?</h1>
       <p>CrossFit description</p>
     </div>
+    <div class="col-xs-12 col-sm-6">
+      <iframe src="https://www.youtube.com/embed/mlVrkiCoKkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 500px; height: 315px;"></iframe>
+    </div>
+  </div>
+  <div class="row">
+    <% @instructors.each do |instructor| %>
+      <%= render 'instructor_card', instructor: instructor %>
+    <% end %>
   </div>
 </div>

@@ -1,0 +1,20 @@
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class="card">
+    <div class="instructor-photo text-center">
+      <%= image_tag 'default_user_image', class: "avatar-bordered" %>
+    </div>
+    <div class="instructor-details">
+      <div class="instructor-name text-center">
+        <strong><%= instructor.full_name %></strong>
+      </div>
+      <div class="instructor-quals">
+        <p><strong>Qualifications:</strong></p>
+        <p><%= instructor.qualification %></p>
+      </div>
+      <div class="instructor-about">
+        <p><strong>About:</strong></p>
+        <p><%= instructor.about %></p>
+      </div>
+    </div>
+  </div>
+</div>
