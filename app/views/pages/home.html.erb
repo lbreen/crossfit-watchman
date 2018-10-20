@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.6) 50%), url('<%= image_path 'background.jpeg' %>');">
   <div class="banner-content">
-    <h1 style=" font-weight: bold;">Crossfit Watchman</h1>
-    <p>Forging Elite Fitness</p>
+    <h1>Crossfit Watchman</h1>
+    <p><span id="typed"></span></p>
     <a class="btn btn-primary">Find out more</a>
   </div>
 </div>
@@ -18,3 +18,20 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    var options = {
+      strings: [
+        "Strong,^1000 Fast,^1000 and Hard To Kill"
+        ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      startDelay: 100,
+      backDelay: 1500,
+      loop: true
+    }
+
+    var typed = new Typed("#typed", options);
+  });
+</script>
