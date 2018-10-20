@@ -8,3 +8,16 @@
   font-size: 1rem;
   color: $grey;
 }
+.fadeup {
+  position: relative;
+  -webkit-animation: fadeup 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadeup 1s forwards; /* Firefox < 16 */
+      -ms-animation: fadeup 1s forwards; /* Internet Explorer */
+       -o-animation: fadeup 1s forwards; /* Opera < 12.1 */
+          animation: fadeup 1s forwards;
+}
+
+@keyframes fadeup {
+  from { bottom: -20px; opacity: 0; }
+  to   { bottom: 0px; opacity: 1; }
+}

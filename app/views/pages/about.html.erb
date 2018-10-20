@@ -23,7 +23,9 @@
     </div>
   </div>
   <div class="row">
-    <%= render 'shared/page_title', title: "Meet our instructors" %>
+    <div id="instructor-title">
+      <%= render 'shared/page_title', title: "Meet our instructors" %>
+    </div>
     <br>
     <% @instructors.each do |instructor| %>
       <%= render 'instructor_card', instructor: instructor %>
@@ -37,3 +39,21 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    var title = document.getElementById('instructor-title');
+
+    window.addEventListener('scroll', () => {
+      if (title.getBoundingClientRect().y < 40) {
+        addFadeUp();
+      }
+    });
+
+    const addFadeUp = () => {
+      document.querySelectorAll('.instructor').forEach((ins) => {
+        ins.classList.add('fadeup');
+      })
+    };
+  })
+</script>
