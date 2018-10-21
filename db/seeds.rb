@@ -1,7 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Instructor.destroy_all
+Lesson.destroy_all
+
+rob = Instructor.create(first_name: 'Robert', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
+claire = Instructor.create(first_name: 'Claire', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
+lee = Instructor.create(first_name: 'Lee', last_name: 'Maxwell', qualification: 'Level 1 CrossFit Instructor')
+
+
+Lesson.create(
+  title: "Workout of the Day",
+  start_time: Time.new('2018', '10', '19', '16', '30'),
+  end_time: Time.new('2018', '10', '19', '17', '30'),
+  instructor: rob,
+  description: 'One of our various daily CrossFit sessions'
+  )
+
+Lesson.create(
+  title: "Workout of the Day",
+  start_time: Time.new('2018', '10', '23', '12', '30'),
+  end_time: Time.new('2018', '10', '23', '13', '30'),
+  instructor: claire,
+  description: 'One of our various daily CrossFit sessions'
+  )
+
+puts "DB successfully seeded"

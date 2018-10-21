@@ -16,11 +16,22 @@
 
 body {
   color: black;
+  position: relative;
+}
+p {
+  font-size: 1.4rem;
 }
 h1 {
-  font-weight: bold;
+  letter-spacing: 2px;
+}
+h2 {
   letter-spacing: 2px;
 }
 .padded {
   padding: 2em;
+}
+.page-wrapper {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 50px;
 }

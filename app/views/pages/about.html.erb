@@ -1,0 +1,60 @@
+<%= render 'shared/page_title', title: "About Us" %>
+<div class="container padded">
+  <div class="row page-wrapper" id="about-mission">
+    <div class="col-xs-12 col-md-6">
+      <%= image_tag "crossfit-photo-1", class: "photo-large" %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <h1 class="text-center">Who are we?</h1>
+      <p>CrossFit Watchman is a military affiliate based in Episkopi Garrison, in the Western Sovereign Base Area.</p>
+      <p>The affiliate will provide an opportunity for personnel to follow the CrossFit training methodology, and aims to attract novice and experienced athletes in equal measure.</p>
+      <p>Developing a community of likeminded people, who can share experiences outside of the gym, is as much of an aspiration of the affiliate as developing the health and fitness of our members.</p>
+    </div>
+  </div>
+  <div class="row page-wrapper" id="about-crossfit">
+    <div class="col-xs-12 col-md-6">
+      <h1 class="text-center">What is CrossFit?</h1>
+      <p>CrossFit is constantly varied functional movements performed at high intensity. All CrossFit workouts are based on functional movements, and these movements reflect the best aspects of gymnastics, weightlifting, running, rowing and more.</p>
+      <br>
+      <h5 class="text-center">These are the core movements of life.</h5>
+      <br>
+      <p>Overall, the aim of CrossFit is to forge a broad, general and inclusive fitness supported by measurable, observable and repeatable results. The program prepares trainees for any physical contingency—not only for the unknown but for the unknowable, too. Our specialty is not specializing.</p>
+      <p class="footnote">Credit: CrossFit, Inc. <a href="http://www.crossfit.com">www.crossfit.com</a></p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <p><iframe src="https://www.youtube.com/embed/mlVrkiCoKkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 300px;"></iframe></p>
+    </div>
+  </div>
+  <div class="row" id="about-instructors">
+    <%= render 'shared/page_title', title: "Meet our instructors" %>
+    <br>
+    <% @instructors.each do |instructor| %>
+      <%= render 'instructor_card', instructor: instructor %>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <%= link_to lessons_path, class: 'homepage-card-link' do %>
+        <h2>Find your next session <i class="fas fa-arrow-circle-right"></i></h2>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    var title = document.getElementById('about-instructors');
+
+    window.addEventListener('scroll', () => {
+      if (title.getBoundingClientRect().y < 170) {
+        addFadeUp();
+      }
+    });
+
+    const addFadeUp = () => {
+      document.querySelectorAll('.instructor').forEach((ins) => {
+        ins.classList.add('fadeup');
+      })
+    };
+  })
+</script>

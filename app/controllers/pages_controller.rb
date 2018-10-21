@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @instructors = Instructor.all
   end
 
   def contact
@@ -13,8 +14,5 @@ class PagesController < ApplicationController
   end
 
   def pricing
-  end
-
-  def programme
   end
 end
