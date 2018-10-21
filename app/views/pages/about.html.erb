@@ -1,10 +1,10 @@
 <%= render 'shared/page_title', title: "About Us" %>
 <div class="container padded">
   <div class="row page-wrapper" id="about-mission">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-md-6">
       <%= image_tag "crossfit-photo-1", class: "photo-large" %>
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-md-6">
       <h1 class="text-center">Who are we?</h1>
       <p>CrossFit Watchman is a military affiliate based in Episkopi Garrison, in the Western Sovereign Base Area.</p>
       <p>The affiliate will provide an opportunity for personnel to follow the CrossFit training methodology, and aims to attract novice and experienced athletes in equal measure.</p>
@@ -12,20 +12,21 @@
     </div>
   </div>
   <div class="row page-wrapper" id="about-crossfit">
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12 col-md-6">
       <h1 class="text-center">What is CrossFit?</h1>
-      <p>CrossFit is constantly varied functional movements performed at high intensity. All CrossFit workouts are based on functional movements, and these movements reflect the best aspects of gymnastics, weightlifting, running, rowing and more. These are the core movements of life. They move the largest loads the longest distances, so they are ideal for maximizing the amount of work done in the shortest time. Intensity is essential for results and is measurable as work divided by time—or power. The more work you do in less time, or the higher the power output, the more intense the effort. By employing a constantly varied approach to training, functional movements and intensity lead to dramatic gains in fitness.</p>
+      <p>CrossFit is constantly varied functional movements performed at high intensity. All CrossFit workouts are based on functional movements, and these movements reflect the best aspects of gymnastics, weightlifting, running, rowing and more.</p>
+      <br>
+      <h5 class="text-center">These are the core movements of life.</h5>
+      <br>
       <p>Overall, the aim of CrossFit is to forge a broad, general and inclusive fitness supported by measurable, observable and repeatable results. The program prepares trainees for any physical contingency—not only for the unknown but for the unknowable, too. Our specialty is not specializing.</p>
       <p class="footnote">Credit: CrossFit, Inc. <a href="http://www.crossfit.com">www.crossfit.com</a></p>
     </div>
-    <div class="col-xs-12 col-sm-6">
-      <iframe src="https://www.youtube.com/embed/mlVrkiCoKkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 500px; height: 315px;"></iframe>
+    <div class="col-xs-12 col-md-6">
+      <p><iframe src="https://www.youtube.com/embed/mlVrkiCoKkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 300px;"></iframe></p>
     </div>
   </div>
-  <div class="row">
-    <div id="instructor-title">
-      <%= render 'shared/page_title', title: "Meet our instructors" %>
-    </div>
+  <div class="row" id="about-instructors">
+    <%= render 'shared/page_title', title: "Meet our instructors" %>
     <br>
     <% @instructors.each do |instructor| %>
       <%= render 'instructor_card', instructor: instructor %>
@@ -42,10 +43,10 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", () => {
-    var title = document.getElementById('instructor-title');
+    var title = document.getElementById('about-instructors');
 
     window.addEventListener('scroll', () => {
-      if (title.getBoundingClientRect().y < 40) {
+      if (title.getBoundingClientRect().y < 170) {
         addFadeUp();
       }
     });
