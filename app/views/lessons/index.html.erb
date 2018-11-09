@@ -2,14 +2,16 @@
 <div class="container padded">
   <div class="row">
     <div class="col-xs-12">
-      <% @lessons.each do |lesson| %>
-        <ul class="list-inline">
-          <li><h3><%= lesson.title %></h3></li>
-          <li><p>by <%= lesson.instructor.full_name %></p></li>
-        </ul>
+      <%= month_calendar events: @lessons do |date, lessons| %>
+        <%= date.strftime("%e") %>
 
-        <p><strong>When:</strong> <%= lesson.start_time.strftime('%H:%M') %> to <%= lesson.end_time.strftime('%H:%M') %>, every <%= lesson.start_time.strftime('%A') %></p>
-        <p><strong>What:</strong> <%= lesson.description %></p>
+        <% lessons.each do |lesson| %>
+          <div class="event-details">
+            <%= lesson.title %>
+            <br>
+            <%= lesson.start_time.strftime("%H:%M") %> - <%= lesson.end_time.strftime("%H:%M") %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

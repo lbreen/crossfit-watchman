@@ -1,0 +1,27 @@
+.simple-calendar {
+  .day {
+    font-size: 12px;
+    height: 100px;
+  }
+  .calendar-heading {
+    font-size: 24px;
+  }
+}
+.calendar-event {
+  p {
+    margin: 0;
+  }
+}
+.calendar-heading {
+  font-size: 32px;
+}
+.calendar-heading a {
+  color: $grey;
+  &:hover {
+    color: $dark-grey;
+    text-decoration: none;
+  }
+}
+.event-details {
+  font-size: 12px;
+}
