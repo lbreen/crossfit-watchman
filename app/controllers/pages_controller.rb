@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  skip_before_action :authenticate_instructor!, only: [:home, :about, :contact, :pricing ]
+
   def home
   end
 

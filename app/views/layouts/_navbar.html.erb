@@ -12,11 +12,17 @@
       <%= link_to "Pricing", pricing_path, class: 'navbar-wagon-item navbar-wagon-link' %>
       <%= link_to "Contact us", contact_path, class: 'navbar-wagon-item navbar-wagon-link' %>
     </div>
-    <div class="social-links hidden-sm">
+    <% if current_instructor && current_instructor.admin? %>
+      <div class="admin-links">
+        <%= link_to "Admin", rails_admin_path, class: "btn btn-primary" %>
+        <%= link_to 'Sign out', destroy_instructor_session_path, method: :delete, class: "btn btn-danger" %>
+      </div>
+    <% end %>
+<!--     <div class="social-links hidden-sm">
       <a href="#"><i class="fa fa-instagram"></i></a>
       <a href="#"><i class="fa fa-facebook"></i></a>
       <a href="#"><i class="fa fa-twitter"></i></a>
-    </div>
+    </div> -->
   </div>
   <!-- Mobile Dropdown -->
   <div class="navbar-wagon-item hidden-sm hidden-md hidden-lg">

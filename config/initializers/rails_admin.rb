@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   config.authorize_with do |controller|
-    redirect_to main_app.root_path unless current_user && current_user.admin
+    redirect_to main_app.new_instructor_session_path unless current_instructor && current_instructor.admin
   end
 
   ### Popular gems integration
