@@ -1,9 +1,9 @@
 Instructor.destroy_all
 Lesson.destroy_all
 
-rob = Instructor.create(first_name: 'Robert', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
-claire = Instructor.create(first_name: 'Claire', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
-lee = Instructor.create(first_name: 'Lee', last_name: 'Maxwell', qualification: 'Level 1 CrossFit Instructor')
+rob = Instructor.create(email: 'robsmall@gmail.com', first_name: 'Robert', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
+claire = Instructor.create(email: 'clairesmall@gmail.com', first_name: 'Claire', last_name: 'Small', qualification: 'Level 1 CrossFit Instructor')
+lee = Instructor.create(email: 'leemaxwell@gmail.com', first_name: 'Lee', last_name: 'Maxwell', qualification: 'Level 1 CrossFit Instructor')
 
 
 Lesson.create!(
