@@ -13,6 +13,6 @@ class PagesController < ApplicationController
     }
   end
 
-  def pricing
+  def join
   end
 end
