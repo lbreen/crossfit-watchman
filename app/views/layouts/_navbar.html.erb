@@ -9,20 +9,18 @@
     <div class="page-links">
       <%= link_to "About us", about_path, class: 'navbar-wagon-item navbar-wagon-link' %>
       <%= link_to "Timetable", lessons_path, class: 'navbar-wagon-item navbar-wagon-link' %>
-      <%= link_to "Pricing", pricing_path, class: 'navbar-wagon-item navbar-wagon-link' %>
+      <%= link_to "Join us", join_path, class: 'navbar-wagon-item navbar-wagon-link' %>
       <%= link_to "Contact us", contact_path, class: 'navbar-wagon-item navbar-wagon-link' %>
     </div>
-    <% if current_instructor && current_instructor.admin? %>
-      <div class="admin-links">
+    <div class="social-links hidden-sm">
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <% if instructor_signed_in? %>
+      <div>
         <%= link_to "Admin", rails_admin_path, class: "btn btn-primary" %>
-        <%= link_to 'Sign out', destroy_instructor_session_path, method: :delete, class: "btn btn-danger" %>
+        <%= link_to "Sign out", destroy_instructor_session_path, method: :delete, class: "btn btn-danger" %>
       </div>
     <% end %>
-<!--     <div class="social-links hidden-sm">
-      <a href="#"><i class="fa fa-instagram"></i></a>
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-    </div> -->
   </div>
   <!-- Mobile Dropdown -->
   <div class="navbar-wagon-item hidden-sm hidden-md hidden-lg">
@@ -31,7 +29,7 @@
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><%= link_to "About us", about_path %></li>
         <li><%= link_to "Timetable", lessons_path %></li>
-        <li><%= link_to "Pricing", pricing_path %></li>
+        <li><%= link_to "Join us", join_path %></li>
         <li><%= link_to "Contact us", contact_path %></li>
       </ul>
     </div>

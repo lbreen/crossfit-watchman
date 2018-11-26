@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'pages#about', as: 'about'
   get '/contact', to: 'pages#contact', as: 'contact'
-  get '/pricing', to: 'pages#pricing', as: 'pricing'
+  get '/join', to: 'pages#join', as: 'join'
   get '/timetable', to: 'lessons#index', as: 'lessons'
 
   resources :lessons, only: [:show]
