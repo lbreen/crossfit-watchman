@@ -7,6 +7,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
+gem 'devise'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -15,7 +16,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem "simple_calendar", "~> 2.0"
+gem 'simple_calendar', '~> 2.0'
+gem 'rails_admin', '~> 1.3'
 gem 'cloudinary', '~> 1.9.1'
 gem 'raygun4ruby'
 
