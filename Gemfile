@@ -18,6 +18,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'simple_calendar', '~> 2.0'
 gem 'rails_admin', '~> 1.3'
+gem 'cloudinary', '~> 1.9.1'
+gem 'raygun4ruby'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
