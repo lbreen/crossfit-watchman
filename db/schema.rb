@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2018_12_03_152904) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.text "about"
     t.boolean "admin", default: false
     t.index ["email"], name: "index_instructors_on_email", unique: true
     t.index ["reset_password_token"], name: "index_instructors_on_reset_password_token", unique: true

@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   config.authorize_with do |controller|
-    redirect_to main_app.new_instructor_session_path unless current_instructor && current_instructor.admin?
+    redirect_to main_app.new_instructor_session_path unless current_instructor
   end
 
   ### Popular gems integration
@@ -41,5 +41,25 @@ RailsAdmin.config do |config|
     ## With an audit adapter, you can add:
     # history_index
     # history_show
+  end
+  config.model Instructor do
+    list do
+      field :id
+      field :first_name
+      field :last_name
+      field :email
+      field :admin
+    end
+  end
+
+  config.model Lesson do
+    list do
+      field :id
+      field :title
+      field :start_time
+      field :end_time
+      field :description
+      field :instructor
+    end
   end
 end
