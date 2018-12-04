@@ -25,12 +25,16 @@
       <p><iframe src="https://www.youtube.com/embed/mlVrkiCoKkg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 300px;"></iframe></p>
     </div>
   </div>
-  <div class="row" id="about-instructors">
-    <%= render 'shared/page_title', title: "Meet our instructors" %>
-    <br>
-    <% @instructors.each do |instructor| %>
-      <%= render 'instructor_card', instructor: instructor %>
-    <% end %>
+  <div class="row page-wrapper card">
+    <div class="col-xs-12 col-md-6">
+      <%= image_tag "crossfit-photo-3", class: "photo-large" %>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <h1 class="text-center">Our Instructors</h1>
+      <p>All CrossFit Watchman Coaches are CrossFit Level 1 Trainers, with experience as athletes as well as coaches.  In addition to the CrossFit L1 Trainer Certificate, the coaches also hold the CrossFit Weightlifting specialisation and British Weightlifting Level 2 Instructor Award.</p>
+      <br>
+      <p><strong>All Coaches are military personnel, with experience of fitness within a military setting, and an understanding of the demands and requirements of the tactical athlete.</strong></p>
+    </div>
   </div>
   <div class="row">
     <div class="col-xs-12 text-center">
@@ -40,21 +44,3 @@
     </div>
   </div>
 </div>
-
-<script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", () => {
-    var title = document.getElementById('about-instructors');
-
-    window.addEventListener('scroll', () => {
-      if (title.getBoundingClientRect().y < 200) {
-        addFadeUp();
-      }
-    });
-
-    const addFadeUp = () => {
-      document.querySelectorAll('.instructor').forEach((ins) => {
-        ins.classList.add('fadeup');
-      })
-    };
-  })
-</script>
