@@ -4,5 +4,6 @@ class AddNamesToInstructors < ActiveRecord::Migration[5.2]
     add_column :instructors, :last_name, :string
     add_column :instructors, :qualification, :string
     add_column :instructors, :about, :text
+    add_column :instructors, :city, :string
   end
 end
