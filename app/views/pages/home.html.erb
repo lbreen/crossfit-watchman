@@ -5,18 +5,10 @@
     <%= link_to "Start training", lessons_path, class: "btn btn-primary", id: "cta" %>
   </div>
 </div>
-<div class="container padded">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <%= render 'pages/homepage_card', title: 'About us', subtitle: 'Find out about our team', photo: 'crossfit-photo-1.jpg', path: 'about' %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= render 'pages/homepage_card', title: 'Timetable', subtitle: 'See our weekly programme', photo: 'crossfit-photo-2.jpg', path: 'timetable' %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= render 'pages/homepage_card', title: 'Join us', subtitle: 'Join us now', photo: 'crossfit-photo-3.jpg', path: 'join' %>
-    </div>
-  </div>
+<div class="homepage-links">
+  <%= render 'pages/homepage_card', title: 'About us', subtitle: 'Find out about our team', photo: 'crossfit-photo-1.jpg', path: 'about' %>
+  <%= render 'pages/homepage_card', title: 'Timetable', subtitle: 'See our weekly programme', photo: 'crossfit-photo-2.jpg', path: 'timetable' %>
+  <%= render 'pages/homepage_card', title: 'Join us', subtitle: 'Join us now', photo: 'crossfit-photo-3.jpg', path: 'join' %>
 </div>
 
 <script type="text/javascript">
