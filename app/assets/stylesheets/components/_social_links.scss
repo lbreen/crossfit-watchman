@@ -1,7 +1,17 @@
-.social-links a {
+.navbar-social-links a {
   padding: 10px;
   color: $grey;
   &:hover {
     color: $dark-grey;
+  }
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  i {
+    margin-right: 8px;
+  }
+  a {
+    margin-bottom: 8px;
   }
 }
