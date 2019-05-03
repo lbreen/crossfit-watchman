@@ -16,6 +16,13 @@
     </div>
     <%= render 'layouts/footer' %>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script>
+      window.sugarwod_options = {
+        id: "LIjpQqDQBm",
+        color: "#459ae0"
+      };
+    </script>
+    <script src="//cdn.sugarwod.com/plugin/v1/sugarwod-plugin.js" async></script>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_pack_tag 'application' %>

@@ -2,12 +2,11 @@
   <div class="banner-content">
     <h1 id='homepage-title'>CrossFit Watchman</h1>
     <p><span id="typed"></span></p>
-    <%= link_to "Start training", lessons_path, class: "btn btn-primary", id: "cta" %>
+    <%= link_to "Start training", join_path, class: "btn btn-primary", id: "cta" %>
   </div>
 </div>
 <div class="homepage-links">
   <%= render 'pages/homepage_card', title: 'About us', subtitle: 'Find out about our team', photo: 'crossfit-photo-1.jpg', path: 'about' %>
-  <%= render 'pages/homepage_card', title: 'Timetable', subtitle: 'See our weekly programme', photo: 'crossfit-photo-2.jpg', path: 'timetable' %>
   <%= render 'pages/homepage_card', title: 'Join us', subtitle: 'Join us now', photo: 'crossfit-photo-3.jpg', path: 'join' %>
 </div>
 
