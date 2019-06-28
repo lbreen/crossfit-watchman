@@ -51,15 +51,4 @@ RailsAdmin.config do |config|
       field :admin
     end
   end
-
-  config.model Lesson do
-    list do
-      field :id
-      field :title
-      field :start_time
-      field :end_time
-      field :description
-      field :instructor
-    end
-  end
 end
