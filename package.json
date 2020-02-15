@@ -2,16 +2,16 @@
   "name": "crossfit-watchman",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
+    "@rails/webpacker": "4.2.2",
     "bootstrap": ">=4.3.1",
     "caniuse-lite": "^1.0.30000893",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
     "typed.js": "^2.0.9",
-    "webpack": "^3.0.0"
+    "webpack": "^4.41.6"
   },
   "devDependencies": {
-    "webpack-dev-server": ">=3.1.11"
+    "webpack-dev-server": ">=3.10.3"
   }
 }
