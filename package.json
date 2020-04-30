@@ -6,7 +6,7 @@
     "bootstrap": ">=4.3.1",
     "caniuse-lite": "^1.0.30000893",
     "gmaps": "^0.4.24",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.14.4",
     "typed.js": "^2.0.9",
     "webpack": "^4.41.6"
